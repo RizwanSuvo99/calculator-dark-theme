@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+
+:root {
+  --primary-clr: #f5f5f5;
+  --secondary-clr: #27292e;
+  --bg-1: #fff;
+  --bg-2: #212327;
+  --text-clr: #1e1e1e;
+  --gradient-clr: linear-gradient(180deg, #ed0e98 0%, #fe5a2d 100%);
+
+  --fz-big: 3rem;
+  --fz-medium: 1.5rem;
+  --fz-sm: 1.25rem;
+  --fz-ex-sm: 1rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+/* =============< Reset CSS >============= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+button {
+  display: inline-block;
+  font: inherit;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =============< Custom CSS >============= */
+
+.container {
+  background: var(--bg-1);
+  color: var(--text-clr);
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.place-center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============< Calculator CSS >============= */
+.calculator {
+  height: 100vh;
+}
+
+.calculator-top {
+  gap: 12rem;
+  padding: 1rem 1.7rem;
+}
+
+.calculator-time h6 {
+  font-size: var(--fz-ex-sm);
+  font-weight: var(--fw-medium);
+}
+
+.calculator-result {
+  height: 15rem;
+  color: #000;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 2.5rem;
+  padding-bottom: 2.5rem;
+  font-size: var(--fz-medium);
+  font-weight: var(--fw-medium);
+}
+
+.calculator-btns {
+  background-color: var(--primary-clr);
+  padding: 3rem 2.7rem;
+  border-radius: 2rem 2rem 0 0;
+  text-align: center;
+}
+
+.calculator-btns > .grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--fz-ex-sm);
+}
+
+.calculator-btns li button,
+.theme-btn {
+  font-size: var(--fz-medium);
+  font-weight: var(--fw-regular);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.calculator-btns li button.active,
+.theme-btn.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#double-row {
+  background: var(--gradient-clr);
+  border-radius: 2rem;
+  color: var(--bg-1);
+  transition: all 0.5s ease-in;
+}
+
+#double-row button {
+  background: transparent;
+  color: var(--bg-1);
+}
+
+#double-row:hover {
+  background: linear-gradient(180deg, #fe5a2d 0%, #ed0e98 100%);
+}
+
+.gd-clr button {
+  color: #ed0e98;
+  display: flex;
+}
+
+.dark {
+  background-color: var(--bg-2);
+  color: var(--bg-1);
+}
+
+.dark2 {
+  background-color: var(--secondary-clr);
+}
+
+.calculator-result {
+  color: inherit;
+}
