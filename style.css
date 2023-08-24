@@ -122,6 +122,7 @@ ul {
   border: none;
   cursor: pointer;
   background-color: transparent;
+  user-select: none;
 }
 
 .calculator-btns li button.active,
